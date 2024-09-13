@@ -1,10 +1,11 @@
 import { Module } from '@nestjs/common';
-import { TelegrambotModule } from './telegrambot/telegrambot.module';
 import { ConfigModule } from '@nestjs/config';
+import { TelegrambotGroupModule } from './telegrambotgroup/telegrambot.module';
 
 @Module({
   imports: [
-    TelegrambotModule,
+    // TelegrambotPersonalModule,
+    TelegrambotGroupModule,
     ConfigModule.forRoot({
       isGlobal: true, // Это делает ConfigModule глобальным модулем, чтобы не нужно было импортировать его в каждый модуль
     }),

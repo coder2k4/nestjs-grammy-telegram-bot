@@ -1,9 +1,9 @@
 import { Injectable, OnModuleInit } from '@nestjs/common';
-import { Bot, Context, InlineKeyboard, InputFile, Keyboard } from 'grammy';
 import { ConfigService } from '@nestjs/config';
+import { Bot, Context, InlineKeyboard, InputFile, Keyboard } from 'grammy';
 
 @Injectable()
-export class TelegrambotService implements OnModuleInit {
+export class TelegrambotServicePersonal implements OnModuleInit {
   private bot: Bot<Context>;
   private ownerId;
   userStates = new Map<number, string>();
